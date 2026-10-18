@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Judith Grace | AI & Data Science Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of Judith Grace, B.Tech Artificial Intelligence and Data Science student.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav .logo span {
+            color: #60a5fa;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #dbeafe;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 7px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #60a5fa;
+            color: #111827;
+        }
+
+        .secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #111827;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 17px;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #2563eb;
+        }
+
+        .education-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #6b7280;
+            margin-bottom: 5px;
+        }
+
+        /* SKILLS */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-weight: bold;
+            color: #1e3a8a;
+            border: 1px solid #dbeafe;
+        }
+
+        /* PROJECTS */
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .project-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #6b7280;
+        }
+
+        /* ACTIVITIES */
+
+        .activities {
+            background: white;
+        }
+
+        .activities-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .activity {
+            background: #f8fafc;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .activity h3 {
+            margin-bottom: 5px;
+            color: #1e3a8a;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #d1d5db;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px;
+        }
+
+        .contact-info a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #030712;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">
+            Judith<span>.</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm <span>Judith Grace</span></h1>
+
+            <h2>B.Tech Artificial Intelligence & Data Science Student</h2>
+
+            <p>
+                Passionate about Artificial Intelligence, Data Science,
+                programming and building meaningful technology solutions.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>A little about me</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                I am Judith Grace, a B.Tech student specializing in
+                Artificial Intelligence and Data Science.
+            </p>
+
+            <p>
+                I am interested in programming, data analysis,
+                artificial intelligence and developing practical
+                technology-based solutions.
+            </p>
+
+            <p>
+                I continuously work on improving my technical skills
+                through academic projects, practical learning and
+                hands-on experimentation.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>My academic background</p>
+        </div>
+
+        <div class="education-card">
+
+            <h3>B.Tech – Artificial Intelligence & Data Science</h3>
+
+            <p>
+                Dr. M.G.R. Educational and Research Institute
+            </p>
+
+            <p>
+                Currently pursuing undergraduate studies
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+            <p>Technologies and tools I am learning</p>
+        </div>
+
+        <div class="skills-container">
+
+            <div class="skill">Python</div>
+            <div class="skill">C Programming</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">Matplotlib</div>
+            <div class="skill">Seaborn</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p>Some of my academic and personal work</p>
+        </div>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+
+                <h3>Data Analysis Project</h3>
+
+                <p>
+                    A Python-based data analysis project using
+                    Pandas and visualization libraries to explore,
+                    clean and understand datasets.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Python Programming Projects</h3>
+
+                <p>
+                    Collection of Python programs developed while
+                    learning programming concepts such as functions,
+                    loops, arrays, sorting and data structures.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>DBMS Project</h3>
+
+                <p>
+                    Academic work based on database concepts including
+                    relational algebra, relational calculus, views
+                    and database management systems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIVITIES -->
+
+    <section class="activities" id="activities">
+
+        <div class="section-title">
+            <h2>Activities & Achievements</h2>
+            <p>My learning and college activities</p>
+        </div>
+
+        <div class="activities-container">
+
+            <div class="activity">
+
+                <h3>Technical Activities</h3>
+
+                <p>
+                    Participated in technical learning activities,
+                    programming practice and academic projects.
+                </p>
+
+            </div>
+
+
+            <div class="activity">
+
+                <h3>SDG & Social Initiatives</h3>
+
+                <p>
+                    Participated in activities related to Sustainable
+                    Development Goals and community awareness.
+                </p>
+
+            </div>
+
+
+            <div class="activity">
+
+                <h3>Leadership & Events</h3>
+
+                <p>
+                    Involved in college events, technical activities
+                    and student-oriented initiatives.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Feel free to connect with me for opportunities,
+                projects and collaborations.
+            </p>
+
+        </div>
+
+        <div class="contact-info">
+
+            <p>
+                📧 Email:
+                <a href="mailto:YOUR_EMAIL@gmail.com">
+                    YOUR_EMAIL@gmail.com
+                </a>
+            </p>
+
+            <p>
+                💻 GitHub:
+                <a href="https://github.com/judithgrace-i"
+                   target="_blank">
+                    github.com/judithgrace-i
+                </a>
+            </p>
+
+            <p>
+                🔗 LinkedIn:
+                <a href="YOUR_LINKEDIN_URL"
+                   target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Judith Grace. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
